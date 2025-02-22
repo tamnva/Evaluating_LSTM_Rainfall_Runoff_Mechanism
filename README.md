@@ -32,13 +32,13 @@ Additional data needed to run the R and Python Script, which could be provided u
   - artificial_surfaces_perc
   - frac_snow
 - Model structure: hidden size = 256, one LSTM layer, Linear model head
-- Data for running this model could be downloaded from **https://doi.org/10.5281/zenodo.13320514.* and put into the format as described here https://hydroecolstm.readthedocs.io/en/latest/data.html#input-data-format
+- Data for running this model could be downloaded from https://doi.org/10.5281/zenodo.13320514. The data need to be converted to the format as described at  https://hydroecolstm.readthedocs.io/en/latest/data.html#input-data-format
 
 
 
 ###### 2.2 Run catchment DE110000 with input precipitation = 0 
 
-- The model performance for the test period with original data is NSE = 0.92
+- The model performance for the test period (2011-2020) with original data is high (NSE = 0.92)
 - Below is the simulated streamflow for this catchment with precipitation = 0 (results can be reproduced using this script [lstm_camel_de/load_run_trained_model.py](lstm_camel_de/load_run_trained_model.py))
 
 <p align="center">
