@@ -32,6 +32,6 @@
 - Below is the simulated streamflow for this catchment with precipitation = 0 (results can be reproduce using this script lstm_camel_de/load_run_trained_model.py)
 
 <p align="center">
-  <img src="https://github.com/tamnva/hydroecolstm/blob/master/docs/images/intro_figure.gif" width=100% title="hover text">
+  <img src="https://github.com/tamnva/Evaluating_LSTM_Rainfall_Runoff_Mechanism/blob/master/lstm_camel_de/results/simulated_streamflow_DE110000_no_rainfall.png" width=100% title="hover text">
 </p>
 
