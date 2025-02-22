@@ -1,0 +1,92 @@
+# path to time series data file, input and target features should be in this file
+dynamic_data_file:
+  - C:/Users/nguyenta/Documents/Manuscript/lstm_swat/data/LSTM/time_series.csv
+
+# ouptut directory, model output will be save in this file
+output_directory:
+  - C:/Users/nguyenta/Documents/Manuscript/lstm_swat/data/LSTM/results
+
+# input dynamic features - column name(s) of the dynamic_data_file
+input_dynamic_features:
+  - precip_mm
+  - t_min
+  - t_max
+
+# target output - column name(s) of the dynamic_data_file
+target_features:
+  - eta_mm
+  - q_mm
+
+# selected catchments (object_id) used for traning/validation/test the model
+object_id:
+  - ht_0006
+
+train_period: 
+  - 1976-01-01 00:00
+  - 2000-12-31 00:00
+
+# start and ending of the validation period, must be in yyyy-mm-dd hh:mm format
+valid_period: 
+  - 2001-01-01 00:00
+  - 2010-12-31 00:00
+
+# start and ending of the test period, must be in yyyy-mm-dd hh:mm format
+test_period: 
+  - 2011-01-01 00:00
+  - 2019-12-31 00:00
+
+# model class: LSTM
+# model_class: EA-LSTM
+model_class: LSTM
+
+# Model head: currently only regression model (multi-layer neural network was implemented)
+Regression:
+  # Activation function of each layer (layer 1 - output layer): Identity, ReLu, Sigmoid, Tanh, Softplus
+  activation_function:
+    - Identity
+  # Number of neural each layer (number of neuraon in last layer = number of target features; put  None  for the last layer)
+  num_neurons:
+    - None
+  # Number of layer
+  num_layers: 1
+
+# Scaler for input dynamic features: Z-score, MinMaxScaler, or None
+scaler_input_dynamic_features:
+  - MinMaxScaler
+
+# Scaler for target features: Z-score, MinMaxScaler, or None
+scaler_target_features:
+  - MinMaxScaler
+
+# Hidden size of the LSTM network
+hidden_size: tune.grid_search([20, 30])
+
+# Number of LSTM layers
+num_layers: 1
+
+# Number of training epoch
+n_epochs: 300
+
+# Learning rate
+learning_rate: 0.005
+
+# Dropout rate (applied to output of each LSTM layers)
+dropout: 0.2
+
+# Warmup length
+warmup_length: 30
+
+# Loss function: RMSE, MSE, MAE, NSE_complement, RMSE_normalize
+loss_function: NSE_complement
+
+# Sequence length
+sequence_length: 365
+
+# Batch size
+batch_size: tune.grid_search([5, 10])
+
+# Patience length
+patience: tune.grid_search([10, 20])
+
+# (optional input) function to evaluate the selected model: NSE, RMSE, MAE, MSE
+eval_function: NSE

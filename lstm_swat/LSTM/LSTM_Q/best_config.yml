@@ -1,0 +1,42 @@
+dynamic_data_file:
+  - C:/Users/nguyenta/Documents/Manuscript/lstm_swat/data/LSTM/time_series.csv
+output_directory:
+  - C:/Users/nguyenta/Documents/Manuscript/lstm_swat/data/LSTM/LSTM_Q
+input_dynamic_features:
+  - precip_mm
+  - t_min
+  - t_max
+target_features:
+  - q_mm
+object_id:
+  - ht_0006
+train_period: 
+  - 1976-01-01 00:00
+  - 2000-12-31 00:00
+valid_period: 
+  - 2001-01-01 00:00
+  - 2010-12-31 00:00
+test_period: 
+  - 2011-01-01 00:00
+  - 2019-12-31 00:00
+model_class: LSTM
+Regression:
+  activation_function:
+    - Identity
+  num_neurons:
+    - None
+  num_layers: 1
+scaler_input_dynamic_features:
+  - MinMaxScaler
+scaler_target_features:
+  - MinMaxScaler
+hidden_size: 30
+num_layers: 1
+n_epochs: 300
+learning_rate: 0.005
+dropout: 0.2
+warmup_length: 30
+loss_function: NSE_complement
+sequence_length: 365
+batch_size: 5
+patience: 20
