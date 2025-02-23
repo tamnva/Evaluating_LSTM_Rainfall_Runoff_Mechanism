@@ -24,6 +24,7 @@ data = torch.load(Path(config["output_directory"][0], "data.pt"))
 # To execute the code below, please download the camel_de.zip file and find
 # the file camels_de/timeseries/CAMELS_DE_hydromet_timeseries_DE110000.csv
 # then put this file in to the folder .lstm_camel_de/input_data
+# Link to camel_de.zip https://zenodo.org/records/13837553
 
 input_data = pd.read_csv("input_data/CAMELS_DE_hydromet_timeseries_DE110000.csv",
                          parse_dates=True, index_col=[0])
