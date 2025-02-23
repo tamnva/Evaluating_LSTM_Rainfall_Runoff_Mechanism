@@ -4,7 +4,7 @@
 
 - The source code for scenario simulation with SWAT model: lstm_swat/scenario_simulation_swat.R 
 - The source code for scenario simulation with LSTM model: lstm_swat/scenario_simulatoin_lstm.py
-- [LSTM_Q](https://github.com/tamnva/Evaluating_LSTM_Rainfall_Runoff_Mechanism/tree/master/lstm_swat/LSTM/LSTM_Q) and [LSTM_QET](https://github.com/tamnva/Evaluating_LSTM_Rainfall_Runoff_Mechanism/tree/master/lstm_swat/LSTM/LSTM_QET) models and model structures
+- [LSTM_Q](https://github.com/tamnva/Evaluating_LSTM_Rainfall_Runoff_Mechanism/tree/master/lstm_swat/LSTM/LSTM_Q) and [LSTM_QET](https://github.com/tamnva/Evaluating_LSTM_Rainfall_Runoff_Mechanism/tree/master/lstm_swat/LSTM/LSTM_Q_ET) models and model structures
 
 Additional data needed to run the R and Python Script, which could be provided upon request.
 
