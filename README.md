@@ -4,7 +4,7 @@
 
 - The source code for scenario simulation with SWAT model: lstm_swat/scenario_simulation_swat.R 
 - The source code for scenario simulation with LSTM model: lstm_swat/scenario_simulatoin_lstm.py
-- LSTM_Q and LSTM_Q models and model structures
+- LSTM_Q and LSTM_QET models and model structures
 
 Additional data needed to run the R and Python Script, which could be provided upon request.
 
